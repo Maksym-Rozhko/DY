@@ -1,0 +1,18 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Play", sans-serif;
+  --content-width: 1420px;
+  --container-offset: 0px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --cs-white: #fff;
+  --cs-body-bg: #161824;
+  // --cs-main: #EE9B4F;
+  // --cs-dark: #090A0D;
+  // --cs-grey: #14161C;
+  // --cs-grey-text: #444751;
+  // --cs-light: #E9E9E9;
+}

@@ -1,0 +1,36 @@
+.preloader {
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--cs-dark);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &.remove {
+        animation: decreaseOpacity 4s infinite linear;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/pleloader.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;    
+        width: 350px;
+        height: 350px;
+        top: calc(50% - 175px);
+        left: calc(50% - 175px);
+        transition: all ease-in-out .4s;
+    }
+}
+
+.preloader.active {
+    &::before {
+        animation: upAndDown 1s infinite ease-in-out;
+    }
+}
