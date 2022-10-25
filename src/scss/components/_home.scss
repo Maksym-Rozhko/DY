@@ -934,3 +934,16 @@
         margin-bottom: 20px;
     }
 }
+
+.banner {
+    background-color: #FAFF00;
+    padding: 7px 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    .banner__image {
+        display: block;
+        animation: scrollRunning 10s infinite linear;
+    }
+}
