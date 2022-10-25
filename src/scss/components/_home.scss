@@ -279,10 +279,18 @@
 
     .image-box {
         position: relative;
+        overflow: hidden;
 
         .image {
             border-radius: 20px 0;
             display: block;
+            transition: transform ease-in-out .4s;
+        }
+
+        &:hover {
+            .image {
+                transform: scale(1.1);
+            }
         }
     }
 
@@ -786,7 +794,143 @@
                 position: absolute;
                 left: 0;
                 background: url('../images/icon/calendar.svg') no-repeat center/contain;
+                cursor: pointer;
             }
         }
+    }
+}
+
+.shop {
+    padding-top: 120px;
+    padding-bottom: 90px;
+
+    .subtitle {
+        @include subtitle;
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+
+    .title {
+        @include title;   
+    }
+
+    &__titles {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 10px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #FAFF00;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+        }
+    }
+
+    .link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        color: var(--cs-white);
+        transition: all ease-in-out .4s;
+
+        &:hover {
+            color: #007FB5;
+        }
+    }
+
+    &__controll {
+        display: flex;
+        gap: 20px;
+    }
+
+    .controlls-group {
+        @include flex-v-center;
+        gap: 20px;
+    }
+
+    &__slider-btns {
+        position: static;
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(125px);
+
+        &::after {
+            font-size: 12px;
+            color: var(--cs-white);
+        }
+    }
+
+    &__slider {
+        padding-top: 60px;
+        position: relative;
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #161824;
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(125px);
+        border-radius: 20px 0;
+        padding: 5px 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__label.new {
+        background: #FAFF00;
+    }
+
+    &__label.sale {
+        color: var(--cs-white);
+        background: #DC1F1F;
+    }
+
+    .image-box {
+        position: relative;
+        overflow: hidden;
+
+        .image {
+            border-radius: 20px 0;
+            display: block;
+            transition: transform ease-in-out .4s;
+        }
+
+        &:hover {
+            .image {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__price {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #717485;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        color: var(--cs-white);
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 }
