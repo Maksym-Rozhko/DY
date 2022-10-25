@@ -29,3 +29,31 @@ new Swiper('.swiper.events__slider', {
       }
   },
 });
+
+new Swiper('.swiper.gallery__slider', {
+  slidesPerView: 3.2,
+  centeredSlides: true,
+  spaceBetween: 45,
+  loop: true,
+  speed: 500,
+
+  navigation: {
+    nextEl: '.gallery .gallery__slider-btns.swiper-button-next',
+    prevEl: '.gallery .gallery__slider-btns.swiper-button-prev',
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+    1440: {
+      slidesPerView: 3.2,
+      spaceBetween: 45,
+    }
+},
+});
