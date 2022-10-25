@@ -358,3 +358,34 @@
         }
     }
 }
+
+.quotes-section {
+    padding-top: 80px;
+    padding-bottom: 20px;
+
+    &__container {
+        @include flex-all-center;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include title;
+        font-size: 28px;
+        line-height: 150%;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        .accent {
+            color: #FAFF00;
+        }
+    }
+
+    &__author {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        text-align: right;
+        color: #717485;
+    }
+}
