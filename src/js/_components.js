@@ -1,6 +1,6 @@
 import preloader from './components/preloader';
 // import cursor from './components/cursor';
-// import initSliders from './components/initSliders';
+import initSliders from './components/initSliders';
 // import scrollAnimation from './components/scrollAnimation';
 // import tabs from './components/tabs';
 // import accordion from './components/accordion';

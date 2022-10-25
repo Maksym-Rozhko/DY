@@ -1,21 +1,17 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
-new Swiper('.swiper.rating__slider', {
+new Swiper('.swiper.events__slider', {
     slidesPerView: 4.5,
     spaceBetween: 20,
-    loop: true,
 
     navigation: {
-        nextEl: '.slider__controls .rating__btns.swiper-button-next',
-        prevEl: '.slider__controls .rating__btns.swiper-button-prev',
+        nextEl: '.events .events__slider-btns.swiper-button-next',
+        prevEl: '.events .events__slider-btns.swiper-button-prev',
     },
 
     breakpoints: {
       320: {
-        slidesPerView: 1,
-      },
-      375: {
         slidesPerView: 1.5,
         spaceBetween: 10,
       },

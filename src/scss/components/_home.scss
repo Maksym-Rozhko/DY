@@ -161,7 +161,7 @@
 
     .open-video {
         margin-bottom: auto;
-        
+
         .icon path {
             transition: fill ease-in-out .4s;
         }
@@ -169,6 +169,191 @@
         &:hover {
             .icon path {
                 fill: #007FB5;
+            }
+        }
+    }
+}
+
+.events {
+    position: relative;
+
+    .subtitle {
+        @include subtitle;
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+
+    .title {
+        @include title;   
+    }
+
+    &__titles {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 10px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #FAFF00;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+        }
+    }
+
+    .link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        color: var(--cs-white);
+        transition: all ease-in-out .4s;
+
+        &:hover {
+            color: #007FB5;
+        }
+    }
+
+    &__controll {
+        display: flex;
+        gap: 20px;
+    }
+
+    .controlls-group {
+        @include flex-v-center;
+        gap: 20px;
+    }
+
+    &__slider-btns {
+        position: static;
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(125px);
+
+        &::after {
+            font-size: 12px;
+            color: var(--cs-white);
+        }
+    }
+
+    &__slider {
+        padding-top: 40px;
+        padding-bottom: 120px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: linear-gradient(270deg, #161824 0%, rgba(22, 24, 36, 0) 100%);
+            width: 150px;
+            height: 380px;
+            right: -10px;
+            z-index: 11;
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #161824;
+        background: #FAFF00;
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(125px);
+        border-radius: 20px 0;
+        padding: 5px 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .image-box {
+        position: relative;
+
+        .image {
+            border-radius: 20px 0;
+            display: block;
+        }
+    }
+
+    &__date {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #717485;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        color: var(--cs-white);
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        .amount {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: #717485;
+            padding-left: 20px;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .likes-amount {
+            &::before {
+                background-image: url('../images/icon/likes.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 15px;
+                height: 12px;
+            }
+        }
+        .comments-amount {
+            &::before {
+                background-image: url('../images/icon/comments.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .shares-amount {
+            &::before {
+                background-image: url('../images/icon/share.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 13px;
+                height: 13px;
             }
         }
     }
