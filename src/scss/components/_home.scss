@@ -643,3 +643,150 @@
         margin-bottom: 0;
     }
 }
+
+.live {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background: url('../images/home/live/live-dy.png') no-repeat right bottom/auto, url('../images/home/live/live-bg-2.jpg') no-repeat center/cover;
+
+    &__container {
+        max-width: 620px;
+    }
+
+    .subtitle {
+        @include subtitle;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .title {
+        @include title;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 60px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid #FAFF00;
+            bottom: 0;
+            left: 0;
+            width: 150px;
+        }
+
+        &__text {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #DC1F1F;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                right: -16px;
+                top: 0;
+            }
+        }
+    }
+
+    .descript {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #717485;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 530px;
+    }
+
+    .btn-link {
+        @include btn-link;
+        cursor: pointer;
+        margin-top: 60px;
+    }
+
+    .btn-link--icon {
+        .link-text {
+            position: relative;
+            padding-left: 22px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-style: solid;
+                border-width: 12px 6px 0 6px;
+                border-color: #FAFF00 transparent transparent transparent;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+        }
+    }
+
+    .form {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 520px;
+
+        &__label {
+            @include flex-v-center;
+        }
+
+        &__amount {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.04);
+            min-width: 40px;
+            min-height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        &__input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 15px;
+            width: 100%;
+            color: var(--cs-white);
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: #717485;
+            }
+
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid #FAFF00;
+            }
+        }
+
+        &__input--date {
+            position: relative;
+            padding-left: 32px;
+
+            &::-webkit-calendar-picker-indicator {
+                position: absolute;
+                left: 0;
+                background: url('../images/icon/calendar.svg') no-repeat center/contain;
+            }
+        }
+    }
+}
