@@ -1,0 +1,175 @@
+.main-screen {
+    padding-top: 180px;
+    background-image: url('../images/home/dy-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    position: relative;
+    overflow-x: hidden;
+    flex-grow: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/icon/main-screen-top-vector.svg');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        width: 100%;
+        height: 220px;
+        top: 0;
+    }
+
+    .subtitle {
+        @include subtitle;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: -0.03em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .title {
+        @include title;
+        font-size: 70px;
+        line-height: 110%;
+        margin-top: 90px;
+        margin-bottom: 60px;
+
+        .accent {
+            color: #FAFF00;
+        }
+    }
+
+    .btns-group {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-link {
+        @include btn-link;
+    }
+
+    .btn-link--icon {
+        .link-text {
+            position: relative;
+            padding-left: 22px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-style: solid;
+                border-width: 12px 6px 0 6px;
+                border-color: #FAFF00 transparent transparent transparent;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+        }
+    }
+
+    .btn-link--border-reverse {
+        border-radius: 0 20px;
+
+        &:hover {
+            box-shadow: -2px 2px 2px #FAFF00;
+            transform: translate(2px, -2px);
+        }
+    }
+
+    .main-screen__descript {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.4);
+        padding: 40px 0;
+        margin-top: 140px;
+        border-top: 1px solid #FFFFFF4D;
+        border-bottom: 1px solid #FFFFFF4D;
+
+        .descript-text {
+            max-width: 428px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.quotes {
+    padding-top: 220px;
+
+    &__container {
+        display: flex;
+        position: relative;
+        background-image: url('../images/home/quotes/image-group.png');
+        background-repeat: no-repeat;
+        background-position: right 52px;
+        background-size: auto;
+        margin-left: 85px;
+        padding-bottom: 274px;
+    }
+
+    &__images {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__content {
+        margin-right: 35px;
+        margin-left: 90px;
+        margin-top: 140px;
+        margin-bottom: 180px;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 130%;
+        color: var(--cs-white);
+        max-width: 620px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../images/icon/quotes-icon.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 115px;
+            height: 90px;
+            left: -75px;
+            top: -30px;
+        }
+    }
+
+    &__author {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #717485;
+    }
+
+    .open-video {
+        margin-bottom: auto;
+        
+        .icon path {
+            transition: fill ease-in-out .4s;
+        }
+
+        &:hover {
+            .icon path {
+                fill: #007FB5;
+            }
+        }
+    }
+}

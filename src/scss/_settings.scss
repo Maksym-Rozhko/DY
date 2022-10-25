@@ -150,10 +150,11 @@ a {
 // }
 
 ::-webkit-scrollbar {width: 4px;height: 12px;}
-::-webkit-scrollbar-track-piece {background:var(--cs-grey);}
+::-webkit-scrollbar-track-piece {background:var(--cs-body-bg);}
 ::-webkit-scrollbar-thumb:vertical {
-  height:10px;background:var(--cs-grey-text);-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  height:10px;
+  background:var(#007FB5);
   border-radius: 10px;
-  border: 1px solid #007FB5;
+  border: 4px solid #007FB5;
 }
 ::-webkit-scrollbar-thumb:vertical:hover {background:#FAFF00;}

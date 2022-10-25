@@ -4,11 +4,11 @@
 @include('partials/head.html')
 
 <body>
-    <div class="preloader active"></div>
+    <!-- <div class="preloader active"></div> -->
     <!-- <div class="cursor"></div> -->
-    @include('partials/header.html')
+    <!-- @include('partials/header.html') -->
     <main class="main">
-        @include('partials/menu.html')
+        @include('partials/sidebar.html')
         @include('partials/home.html')
     </main>
     @include('partials/footer.html')
@@ -17,6 +17,13 @@
             <path d="M0.600098 6.80029L6.0001 1.40029L11.4001 6.80029"/>
         </svg>
     </butto> -->
+    <div class="graph-modal">
+      <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="quotes-video">
+        <div class="graph-modal__content">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/SaK7VuZcIM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
