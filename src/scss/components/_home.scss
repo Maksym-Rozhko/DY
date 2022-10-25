@@ -389,3 +389,36 @@
         color: #717485;
     }
 }
+
+.large-video-block {
+    background-image: url('../images/home/large-image.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    height: 800px;
+    position: relative;
+
+    .open-video {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(125px);
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - -50px);
+        transition: transform ease-in-out .4s;
+
+        svg path {
+            transition: fill ease-in-out .4s;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            
+            svg path {
+                fill: #007FB5;
+            }
+        }
+    }
+}
