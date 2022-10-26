@@ -37,6 +37,9 @@
             max-width: 500px;
         }
     }
+    .large-video-block {
+        height: 600px;
+    }
 }
 
 @include small-desktop {
@@ -102,6 +105,12 @@
     .main {
         padding-top: 78px;
     }
+    .large-video-block {
+        .open-video {
+            top: calc(50% - 100px);
+            left: calc(50% + -50px);
+        }
+    }
 }
 
 
@@ -159,6 +168,10 @@
             font-size: 24px;
             margin-bottom: 40px;
         }
+    }
+    .large-video-block {
+        background-position: center;
+        height: 400px;
     }
 }
 
@@ -273,6 +286,9 @@
         &__title {
             font-size: 22px;
         }
+    }
+    .large-video-block {
+        height: 375px;
     }
 }
 
