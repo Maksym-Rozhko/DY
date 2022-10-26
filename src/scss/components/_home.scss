@@ -80,7 +80,7 @@
         }
     }
 
-    .main-screen__descript {
+    &__descript {
         font-weight: 400;
         font-size: 12px;
         line-height: 130%;
@@ -584,6 +584,7 @@
         .swiper-slide:not(.swiper-slide-active) {
             max-width: 400px;
             height: 608px;
+            overflow: hidden;
     
             .image {
                 max-width: 400px;
@@ -1085,7 +1086,7 @@
         &__form {
             position: relative;
         }
-        
+
         .form {
             &__input {
                 background: transparent;

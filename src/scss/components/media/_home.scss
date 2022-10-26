@@ -1,3 +1,106 @@
+@include large-desktop {
+    .sidebar-space {
+        padding-left: 300px;
+    }
+}
+
+@include big-desktop {
+    .main-screen {
+        &__descript {
+            margin-top: 40px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        .title {
+            font-size: 50px;
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@include small-desktop {
+    .main-screen {
+        padding-top: 100px;
+
+        .title {
+            font-size: 40px;
+        }
+    }
+}
+
+@include tablet {
+    .sidebar-space {
+        padding-left: 0;
+
+        .wrapper {
+            margin-left: auto;
+        }
+    }
+    .main-screen {
+        &__descript {
+            .descript-text {
+                margin: 0 25px;
+            }
+        }
+    }
+}
+
+
+@include small-tablet {
+    .main-screen {
+        padding-top: 50px;
+
+        .title {
+            font-size: 35px;
+            margin-top: 30px;
+        }
+
+        &__descript {
+            margin-top: 20px;
+            padding: 20px 0;
+        }
+    }
+}
+
+
 @include mobile {
-    
+    .main-screen {
+        background-image: url('../images/home/dy-bg-mob.jpg');
+        background-position: center top;
+        background-size: auto;
+        padding-top: 400px;
+
+        &::before {
+            content: none;
+        }
+
+        &__descript {
+            display: none;
+        }
+
+        &__container {
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            line-height: 25px;
+        }
+
+        .title {
+            font-size: 28px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btns-group {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }   
 }

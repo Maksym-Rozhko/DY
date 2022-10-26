@@ -126,3 +126,9 @@
         }
     }
 }
+
+.overlay.menu--active {
+    .sidebar {
+        left: 0;
+    }
+}

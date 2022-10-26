@@ -19,3 +19,17 @@
 // .header.active-scroll {
 //     background-color: var(--cs-grey);
 // }
+
+.header {
+    display: none;
+    padding: 12px 0;
+    background-color: #161824;
+
+    &__container {
+        @include flex-all-sb;
+    }
+
+    .burger {
+        @include burger;
+    }
+}

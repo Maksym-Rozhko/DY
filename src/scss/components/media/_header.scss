@@ -1,3 +1,16 @@
-@include mobile {
+@include tablet {
+    .header {
+        display: flex;
 
+        .burger {
+            display: flex;
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        position: relative;
+        z-index: 11;
+    }
 }
