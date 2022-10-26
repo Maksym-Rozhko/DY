@@ -947,3 +947,101 @@
         animation: scrollRunning 10s infinite linear;
     }
 }
+
+.follow {
+    padding-top: 60px;
+
+    &__container {
+        padding-bottom: 60px;
+        max-width: 1320px;
+        margin-left: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        @include flex-all-sb;
+        gap: 20px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: var(--cs-white);
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding-left: 35px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../images/icon/share.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__descript {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 130%;
+        color: #717485;
+        max-width: 428px;
+
+    }
+
+    .socials {
+        @include flex-all-center;
+        gap: 20px;
+
+        &__link {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(125px);
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            @include flex-all-center;
+            border: 1px solid transparent;
+            transition: all ease-in-out .4s;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: #FFFFFF;
+                filter: blur(20px);
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                top: 50%;
+                opacity: 0;
+                transition: opacity ease-in-out .4s;
+            }
+
+            .icon {
+                width: 32px;
+                height: 32px;
+                fill: rgba(255, 255, 255, 0.1);
+                transition: all ease-in-out .4s;
+            }
+
+            &:hover {
+                border: 1px solid rgba(255, 255, 255, 0.2);
+
+                &::before {
+                    opacity: 1;
+                }
+
+                .icon {
+                    fill: var(--cs-white);
+                }
+            }
+        }
+    }
+}
