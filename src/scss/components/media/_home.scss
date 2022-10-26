@@ -59,6 +59,13 @@
             font-size: 40px;
         }
     }
+    .quotes-section {
+        &__title {
+            br {
+                display: none;
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -91,6 +98,9 @@
         &__slider {
             z-index: 0;
         }
+    }
+    .main {
+        padding-top: 78px;
     }
 }
 
@@ -140,6 +150,14 @@
     .events {
         .title {
             font-size: 35px;
+        }
+    }
+    .quotes-section {
+        padding: 60px 0;
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 40px;
         }
     }
 }
@@ -245,6 +263,15 @@
             .swiper-slide {
                 max-width: 300px;
             }
+
+            &-btns {
+                z-index: 0;
+            }
+        }
+    }
+    .quotes-section {
+        &__title {
+            font-size: 22px;
         }
     }
 }
