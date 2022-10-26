@@ -10,7 +10,7 @@
 
 @include mobile {
     .header {
-        position: relative;
+        position: sticky;
         z-index: 11;
     }
 }

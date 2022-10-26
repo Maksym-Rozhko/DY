@@ -21,6 +21,22 @@
             margin-bottom: 30px;
         }
     }
+    .quotes {
+        padding-top: 120px;
+
+        &__container {
+            margin-left: 0;
+            padding-bottom: 174px;
+        }
+
+        &__content {
+            margin-left: 0;
+        }
+
+        &__text {
+            max-width: 500px;
+        }
+    }
 }
 
 @include small-desktop {
@@ -29,6 +45,13 @@
 
         .title {
             font-size: 40px;
+        }
+    }
+    .quotes {
+        &__container {
+            padding-bottom: 100px;
+            background-position: right 200px;
+            background-size: 350px;
         }
     }
 }
@@ -48,6 +71,14 @@
             }
         }
     }
+    .quotes {
+        &__content {
+            margin-right: 15px;
+        }
+        .open-video {
+            margin-bottom: 100px;
+        }
+    }
 }
 
 
@@ -63,6 +94,34 @@
         &__descript {
             margin-top: 20px;
             padding: 20px 0;
+        }
+    }
+    .quotes {
+        padding-bottom: 120px;
+
+        &__container {
+            padding-bottom: 160px;
+            flex-direction: column;
+            background-position: bottom;
+            background-size: 325px;
+        }
+
+        &__images {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 115px;
+        }
+
+        &__content {
+            margin-top: 70px;
+            margin-bottom: 50px;
+            margin-left: auto;
+        }
+        
+        .open-video {
+            margin-bottom: 120px;
+            margin-right: 130px;
         }
     }
 }
@@ -103,4 +162,29 @@
             gap: 10px;
         }
     }   
+    .quotes {
+        padding-top: 150px;
+
+        &__content {
+            margin-right: auto;
+            padding-left: 76px;
+        }
+        &__text {
+            max-width: 260px;
+        }
+        
+        &__images {
+            img:first-child {
+                margin-top: -45px;
+            }
+        }
+    }
+}
+
+@include small-mobile {
+    .quotes {
+        &__images {
+            gap: 50px;
+        }
+    }
 }
