@@ -47,9 +47,9 @@ new Swiper('.swiper.gallery__slider', {
             slidesPerView: 1,
             spaceBetween: 10,
         },
-        1024: {
-            slidesPerView: 2,
-            spaceBetween: 25,
+        768: {
+            slidesPerView: 2.6,
+            spaceBetween: 10,
         },
         1440: {
             slidesPerView: 3.2,
