@@ -1,3 +1,91 @@
 .footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(125px);
 
+    &::before {
+        content: "";
+        position: absolute;
+        background: #007FB5;
+        filter: blur(221px);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 232px;
+    }
+
+    &__container {
+        @include flex-all-sb;
+        gap: 15px;
+        max-width: 1373px;
+        margin-left: auto;
+    }
+    .scroll-top {
+        @include flex-all-center;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(125px);
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        cursor: pointer;
+        
+        &:hover {
+            svg {
+                animation: arrow-shake-top infinite ease-in-out 2s;
+            }
+        }
+    }
+
+    .copyright {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        margin-right: auto;
+    }
+
+    &__links {
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            @include flex-v-center;
+            margin-right: 116px;
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-right: 115px;
+                position: relative;
+
+                &::before {
+                    content: "/";
+                    position: absolute;
+                    right: -57px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: rgba(255, 255, 255, 0.3);
+                }
+            }
+        }
+
+        a {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);    
+            transition: color ease-in-out .4s;
+
+            &:hover {
+                color: #FAFF00;
+            }
+        }
+    }
 }

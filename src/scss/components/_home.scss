@@ -1082,9 +1082,11 @@
             margin-bottom: 56px;
         }
 
-        .form {
+        &__form {
             position: relative;
-
+        }
+        
+        .form {
             &__input {
                 background: transparent;
                 border: none;
