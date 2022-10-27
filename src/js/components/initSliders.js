@@ -59,7 +59,7 @@ new Swiper('.swiper.gallery__slider', {
 });
 
 new Swiper('.swiper.shop__slider', {
-    slidesPerView: 4.5,
+    slidesPerView: 3,
     spaceBetween: 20,
 
     navigation: {
@@ -69,14 +69,10 @@ new Swiper('.swiper.shop__slider', {
 
     breakpoints: {
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1.1,
             spaceBetween: 10,
         },
         575: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        1024: {
             slidesPerView: 2,
             spaceBetween: 10,
         },
