@@ -10,6 +10,16 @@
             padding-bottom: 80px;
         }
     }
+    .live {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        background: url('../images/home/live/live-dy.png') no-repeat right bottom/600px, 
+            url('../images/home/live/live-bg-2.jpg') no-repeat center/cover;
+
+        &__container {
+            max-width: 500px;
+        }
+    }
 }
 
 @include big-desktop {
@@ -72,6 +82,10 @@
             }
         }
     }
+    .live {
+        background: url('../images/home/live/live-dy.png') no-repeat right bottom/500px, 
+            url('../images/home/live/live-bg-2.jpg') no-repeat center/cover;
+    }
 }
 
 @include small-desktop {
@@ -107,6 +121,20 @@
         }
         .title {
             font-size: 40px;
+        }
+    }
+    .live {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: url('../images/home/live/live-dy.png') no-repeat right bottom/450px, 
+            url('../images/home/live/live-bg-2.jpg') no-repeat center/cover;
+
+        .title {
+            font-size: 40px;
+        }
+
+        &__container {
+            max-width: 400px;
         }
     }
 }
@@ -157,6 +185,17 @@
                 z-index: 0;
             }
         }
+    }
+    .live {
+        background: url('../images/home/live/live-dy.png') no-repeat right bottom/650px, 
+            url('../images/home/live/live-bg-2.jpg') no-repeat center/cover;
+    }
+}
+
+@include middle-tablet {
+    .live {
+        background: url('../images/home/live/live-dy.png') no-repeat right bottom/450px, 
+            url('../images/home/live/live-bg-2.jpg') no-repeat center/cover;
     }
 }
 
@@ -268,6 +307,28 @@
                     min-width: 325px;
                 }
             }
+        }
+    }
+    .live {
+        padding-bottom: 400px;
+
+        &__container {
+            margin: 0 auto;
+            max-width: inherit;
+        }
+
+        .title {
+            font-size: 35px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            max-width: inherit;
+        }
+
+        .btn-link {
+            margin-top: 20px;
         }
     }
 }
@@ -420,6 +481,20 @@
             }
         }
     }
+    .live {
+        padding-bottom: 450px;
+        backdrop-filter: blur(125px);
+        background: rgba(255, 255, 255, 0.02) url('../images/home/live/live-dy-mob.png') no-repeat bottom center/contain;
+
+        .title {
+            font-size: 25px;
+            margin-bottom: 40px;
+        }
+
+        .btn-link {
+            margin-top: 40px;
+        }
+    }
 }
 
 @include small-mobile {
@@ -427,5 +502,9 @@
         &__images {
             gap: 50px;
         }
+    }
+    .live {
+        background: rgba(255, 255, 255, 0.02) url('../images/home/live/live-dy-mob.png') no-repeat bottom center/auto;
+        padding-bottom: 380px;
     }
 }
