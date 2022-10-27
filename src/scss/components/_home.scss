@@ -1121,7 +1121,8 @@
                 text-decoration-line: underline;
                 text-transform: uppercase;
                 color: #FFFFFF;
-                background-color: transparent;
+                background: #161824;
+                padding: 3px 14px;
                 border: none;
                 cursor: pointer;
                 @include flex-v-center;
