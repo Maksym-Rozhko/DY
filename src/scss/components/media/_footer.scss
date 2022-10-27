@@ -1,3 +1,66 @@
-@include mobile {
+@include big-desktop {
+    .footer {
+        &__links {
+            ul {
+                margin-right: 25px;
 
+                li {
+                    &:not(:last-child) {
+                        margin-right: 30px;
+                        
+                        &::before {
+                            right: -19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include small-desktop {
+    .footer {
+        &__container {
+            flex-direction: column;
+        }
+        .copyright {
+            margin: 0 auto;
+        }
+        &__links {
+            ul {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        position: relative;
+
+        .scroll-top {
+            position: absolute;
+            top: -26px;
+        }
+    }
+}
+
+@include mobile {
+    .footer {
+        &__links {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                        
+                        &::before {
+                            right: -12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
